@@ -1,7 +1,13 @@
-import { View, Text } from "react-native";
+import { View, Text, SafeAreaView } from "react-native";
 import React from "react";
-import { SafeAreaView } from "react-native-safe-area-context";
+
+import { COLORS, NFTData } from "../constants";
+import { NFTCard, HomeHeader, FocusedStatusBar } from "../components";
 
 export default function Home() {
-  return <SafeAreaView style={{ flex: 1 }}></SafeAreaView>;
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <FocusedStatusBar background={COLORS.primary} />
+    </SafeAreaView>
+  );
 }

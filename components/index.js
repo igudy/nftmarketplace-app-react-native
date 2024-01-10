@@ -1,5 +1,5 @@
 import HomeHeader from "./HomeHeader";
-import FocusStatusBar from "./FocusStatusBar";
+import FocusedStatusBar from "./FocusedStatusBar";
 import NFTCard from "./NFTCard";
 
-export { HomeHeader, NFTCard, FocusStatusBar };
+export { HomeHeader, NFTCard, FocusedStatusBar };

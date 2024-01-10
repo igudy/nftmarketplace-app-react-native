@@ -1,10 +1,10 @@
 import { View, Text } from "react-native";
 import React from "react";
 
-export default function FocusStatusBar() {
+export default function FocusedStatusBar() {
   return (
     <View>
-      <Text>FocusStatusBar</Text>
+      <Text>FocusedStatusBar</Text>
     </View>
   );
 }
