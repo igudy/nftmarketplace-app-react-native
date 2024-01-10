@@ -17,8 +17,14 @@ export default function App() {
   const Stack = createStackNavigator();
 
   const [loaded] = useFonts({
-    InterBold: require("./"),
+    InterBold: require("./assets/icons/Inter-Bold.ttf"),
+    InterSemiBold: require("./assets/icons/Inter-SemiBold.ttf"),
+    InterMedium: require("./assets/icons/Inter-Medium.ttf"),
+    InterRegular: require("./assets/icons/Inter-Regular.ttf"),
+    InterLight: require("./assets/icons/Inter-Light.ttf"),
   });
+
+  if (!loaded) return null;
 
   return (
     <NavigationContainer theme={theme}>
