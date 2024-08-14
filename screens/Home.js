@@ -17,7 +17,7 @@ export default function Home() {
             renderItem={({ item }) => <NFTCard data={item} />}
             keyExtractor={(item) => item.id}
             showsVerticalScrollIndicator={false}
-            listHeaderComponent={<HomeHeader />}
+            ListHeaderComponent={<HomeHeader />}
           />
         </View>
 

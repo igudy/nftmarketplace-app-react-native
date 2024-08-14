@@ -2,9 +2,52 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import { SIZES, FONTS, COLORS, SHADOWS, assets } from "../constants";
 
-export const NFTTitle = () => {};
+export const NFTTitle = ({ title, subTitle, titleSize, subTitleSize }) => {
+  return (
+    <View>
+      <Text
+        style={{
+          fontFamily: FONTS.semiBold,
+          fontSize: titleSize,
+          color: COLORS.primary,
+        }}
+      >
+        {title}
+      </Text>
 
-export const EthPrice = () => {};
+      <Text
+        style={{
+          fontFamily: FONTS.regular,
+          fontSize: subTitleSize,
+          color: COLORS.primary,
+        }}
+      >
+        {subTitle}
+      </Text>
+    </View>
+  );
+};
+
+export const EthPrice = ({ price }) => {
+  return (
+    <View style={{ flexDirection: "row", alignItems: "center" }}>
+      <Image
+        source={assets.eth}
+        resizeMethod="contain"
+        style={{ width: 20, height: 20, marginRight: 2 }}
+      />
+      <Text
+        style={{
+          fontFamily: FONTS.medium,
+          fontSize: SIZES.font,
+          color: COLORS.primary,
+        }}
+      >
+        {price}
+      </Text>
+    </View>
+  );
+};
 
 export const ImageCmp = ({ imgUrl, index }) => {
   return (
@@ -39,9 +82,31 @@ export const EndDate = () => {
         paddingHorizontal: SIZES.font,
         paddingVertical: SIZES.base,
         backgroundColor: COLORS.white,
+        justifyContent: "center",
+        alignItems: "center",
+        ...SHADOWS.light,
+        elevation: 1,
+        maxWidth: "50%",
       }}
     >
-      <Text>EndDate</Text>
+      <Text
+        style={{
+          fontFamily: FONTS.regular,
+          fontSize: SIZES.small,
+          color: COLORS.primary,
+        }}
+      >
+        Ending In
+      </Text>
+      <Text
+        style={{
+          fontFamily: FONTS.regular,
+          fontSize: SIZES.small,
+          color: COLORS.primary,
+        }}
+      >
+        12h 30m
+      </Text>
     </View>
   );
 };
